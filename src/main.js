@@ -4,7 +4,7 @@ import router from "./router";
 
 Vue.config.productionTip = false;
 
-Vue.filter("to-lowercase", function(value) {
+Vue.filter("toLowercase", function(value) {
   return value.toLowerCase();
     }
 );

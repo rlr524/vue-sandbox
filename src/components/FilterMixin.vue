@@ -3,7 +3,8 @@
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         <h1>Filters and Mixins</h1>
-        <p>{{ text | toUppercase }}</p>
+        <p>{{ text | toUppercase | toLowercase }}</p>
+        <p>{{ otherText | toLowercase | toUppercase }}</p>
       </div>
     </div>
   </div>
@@ -15,6 +16,7 @@ export default {
   data: function() {
     return {
       text: "Hello, there.",
+      otherText: "Madison is Cute",
     };
   },
   //   Filters are simply functions and can be registered locally or globally (in main.js)
