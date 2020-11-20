@@ -1,21 +1,18 @@
 <template>
   <div>
-    <template v-if="bad">
+    <template v-if="shopping">
       <div>
-        <img src="@/assets/IMG_1080.JPG" alt="" />
-        <h1>Madison has been bad and needs a spanking!</h1>
+        <img src="@/assets/madison_back.png" alt="" />
+        <h1>Madison!</h1>
         <p>
-          Put her over your knee, bare her sweet little bottom and redden it.
+          Is shopping!
         </p>
       </div>
     </template>
     <template v-else>
       <div>
-        <img
-          src="@/assets/E961C2BD-DB3E-4D60-8E31-F4BF731A6470-7864-00000E52EF996B65.JPG"
-          alt=""
-        />
-        <h1>Madison has been a good girl!</h1>
+        <img src="@/assets/madison_sitting.jpg" alt="" />
+        <h1>Madison!</h1>
         <p>Get her some ice cream!</p>
       </div>
     </template>
@@ -27,7 +24,7 @@ export default {
   name: "Condition",
   data: function() {
     return {
-      bad: true,
+      shopping: true,
     };
   },
 };
