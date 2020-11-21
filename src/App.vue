@@ -5,7 +5,9 @@
       |
       <router-link to="/about">About</router-link>
       |
-      <router-link to="/filter">Filters & MixIns</router-link>
+      <router-link to="/filter">Filters & MixIns</router-link> 
+      |
+      <router-link to="/list">List</router-link>
     </div>
     <router-view />
   </div>
@@ -16,7 +18,6 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 

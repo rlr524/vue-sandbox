@@ -1,46 +1,27 @@
 <template>
-<div>
-    <div class="container">
+  <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-        <h1>Filters and Computed Properties</h1>
-        <p>{{ text | toUppercase | toLowercase }}</p>
-        <p>{{ otherText | toLowercase | toUppercase }}</p>
-        <hr>
+        <h1>Mixins</h1>
         <label>
           <input v-model="fruitFilter">
         </label>
         <ul>
           <li v-for="(fruit, index) in filteredFruits" :key="index"> {{ fruit }}</li>
         </ul>
-        <hr>
-        
       </div>
     </div>
   </div>
-<app-list></app-list>
-</div>
 </template>
 
 <script>
-import List from '@/components/List.vue';
-
 export default {
   name: "FilterMixin",
   data: function() {
     return {
-      text: "Hello, there.",
-      otherText: "Madison is Cute",
       fruits: ["Apple", "Banana", "Orange", "Mango", "Melon", "Lemon", "Lime", "Pineapple"],
       fruitFilter: "",
     };
-  },
-  //   Filters are simply functions and can be registered locally or globally (in main.js)
-  //   Each filter must take in a value, as the reason it exists is to transform some data (e.g. that value)
-  filters: {
-    toUppercase: function(value) {
-      return value.toUpperCase();
-    },
   },
   // We use a computed property here to drive our fruits filter input because it only recalculates when
   // fruitFilter changes or the fruits array changes, which makes it more performant that using a filter as
@@ -52,9 +33,6 @@ export default {
         return element.match(this.fruitFilter);
       })
     }
-  },
-  components: {
-    appList: List,
   }
 };
 </script>

@@ -25,11 +25,16 @@ const routes = [
     component: () =>
       import(/*webpackChunkName: "filter" */ "../components/FilterMixin.vue"),
   },
+  {
+    path: "/list",
+    name: "List",
+    component: () => 
+      import(/*webpackChunkName: "list" */ "../components/List.vue"),
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
   routes,
 });
 
