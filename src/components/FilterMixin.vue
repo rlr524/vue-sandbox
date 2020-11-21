@@ -5,6 +5,13 @@
         <h1>Filters and Mixins</h1>
         <p>{{ text | toUppercase | toLowercase }}</p>
         <p>{{ otherText | toLowercase | toUppercase }}</p>
+        <hr>
+        <label>
+          <input v-model="fruitFilter">
+        </label>
+        <ul>
+          <li v-for="(fruit, index) in fruits" :key="index"> {{ fruit }}</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -17,6 +24,8 @@ export default {
     return {
       text: "Hello, there.",
       otherText: "Madison is Cute",
+      fruits: ["Apple", "Banana", "Orange", "Mango", "Melon", "Lemon", "Lime", "Pineapple"],
+      fruitFilter: "",
     };
   },
   //   Filters are simply functions and can be registered locally or globally (in main.js)
@@ -26,6 +35,13 @@ export default {
       return value.toUpperCase();
     },
   },
+  computed: {
+    filteredFruits: function() {
+      return this.fruits.filter((element) => {
+        return element.match(this.fruitFilter);
+      })
+    }
+  }
 };
 </script>
 

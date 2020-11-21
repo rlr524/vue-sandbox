@@ -6,8 +6,7 @@ Vue.config.productionTip = false;
 
 Vue.filter("toLowercase", function(value) {
   return value.toLowerCase();
-    }
-);
+});
 
 new Vue({
   router,
