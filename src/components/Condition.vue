@@ -1,12 +1,13 @@
 <template>
-  <div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary" @click="changeImage">
+      Change Madison
+    </button>
     <template v-if="shopping">
       <div>
-        <img src="@/assets/madison_back.png" alt="" />
+        <img src="@/assets/madison_back.png" class="img-fluid" alt="" />
         <h1>Madison!</h1>
-        <p>
-          Is shopping!
-        </p>
+        <p>Is shopping!</p>
       </div>
     </template>
     <template v-else>
@@ -22,12 +23,21 @@
 <script>
 export default {
   name: "Condition",
-  data: function() {
+  data: function () {
     return {
-      shopping: true,
+      shopping: false,
     };
+  },
+  methods: {
+    changeImage: function () {
+      this.shopping === true ? (this.shopping = false) : (this.shopping = true);
+    },
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.btn {
+  margin-bottom: 1%;
+}
+</style>

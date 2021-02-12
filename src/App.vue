@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <div id="app" class="container">
+    <div id="nav" class="text-center">
       <router-link to="/">Home</router-link>
       |
       <router-link to="/about">About</router-link>
       |
-      <router-link to="/filter">Filters & MixIns</router-link> 
+      <router-link to="/filter">Filters & MixIns</router-link>
       |
       <router-link to="/list">List</router-link>
     </div>

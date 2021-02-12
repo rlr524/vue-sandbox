@@ -1,6 +1,5 @@
 <template>
-  <div class="home">
-    <img src="@/assets/logo.png" alt="" />
+  <div id="home">
     <Condition />
   </div>
 </template>
