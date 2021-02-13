@@ -9,6 +9,7 @@
           <p>{{ text | toUppercase | toLowercase }}</p>
           <p>{{ otherText | toLowercase | toUppercase }}</p>
           <hr />
+          <h1>FilterMixin Component</h1>
           <label>
             <input v-model="fruitFilter" />
           </label>
@@ -34,7 +35,7 @@ export default {
   components: {
     appList: List,
   },
-  data: function () {
+  data() {
     return {
       text: "Madison is so cute.",
       otherText: "The cutest!",
@@ -43,7 +44,7 @@ export default {
   //   Filters are simply functions and can be registered locally or globally (in main.js)
   //   Each filter must take in a value, as the reason it exists is to transform some data (e.g. that value)
   filters: {
-    toUppercase: function (value) {
+    toUppercase(value) {
       return value.toUpperCase();
     },
   },

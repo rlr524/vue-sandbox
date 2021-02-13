@@ -23,13 +23,13 @@
 <script>
 export default {
   name: "Condition",
-  data: function () {
+  data() {
     return {
       shopping: false,
     };
   },
   methods: {
-    changeImage: function () {
+    changeImage() {
       this.shopping === true ? (this.shopping = false) : (this.shopping = true);
     },
   },

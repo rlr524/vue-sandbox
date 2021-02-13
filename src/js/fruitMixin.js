@@ -1,5 +1,15 @@
+/**
+ * @description
+ * A mixin is essentially just a way to bundle data, methods, and computed properties into one
+ * js file for export. We could have multiple mixins defined here and export them all
+ * while only using them as needed in our files as named imports but we should only do
+ * that if the mixins are related to the same functionality, else we should
+ * create separate js files for each
+ * NOTE that mixins are allocated separately when used in separate components, they are passed
+ * by value, not by reference and state is not shared across components that share the same mixin
+ */
 const fruitMixin = {
-	data: function() {
+	data() {
 		return {
 			fruits: [
 				"Apple",
@@ -27,6 +37,9 @@ const fruitMixin = {
 				return element.match(this.fruitFilter);
 			});
 		},
+	},
+	created() {
+		console.log("Inside Fruit Mixin Created Hook");
 	},
 };
 
