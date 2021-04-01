@@ -8,6 +8,8 @@
       <router-link to="/filter">Filters & MixIns</router-link>
       |
       <router-link to="/list">List</router-link>
+      |
+      <router-link to="/random">Random</router-link>
     </div>
     <router-view />
   </div>
